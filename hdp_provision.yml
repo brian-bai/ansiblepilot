@@ -1,0 +1,6 @@
+---
+- hosts: horton
+  user: root
+  tasks:
+  - name: provision vm before hdp cluster installation
+    script: provision.sh

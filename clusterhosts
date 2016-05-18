@@ -1,0 +1,7 @@
+192.168.0.31 ambari.hortondemo ambari 
+192.168.0.32 namenode.hortondemo namenode 
+192.168.0.33 resourcemanager.hortondemo resourcemanager 
+192.168.0.34 node1.hortondemo node1 
+192.168.0.35 node2.hortondemo node2 
+127.0.0.1   localhost localhost.localdomain localhost4 localhost4.localdomain4
+::1         localhost localhost.localdomain localhost6 localhost6.localdomain6
