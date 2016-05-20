@@ -1,4 +1,4 @@
-rmport /etc/pki/rpm-gpg/RPM-GPG-KEY-CentOS-6
+rpm --import /etc/pki/rpm-gpg/RPM-GPG-KEY-CentOS-6
 sudo yum -y install ntp
 sudo chkconfig ntpd on
 sudo /etc/init.d/ntpd start

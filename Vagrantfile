@@ -39,6 +39,35 @@ Vagrant.configure(2) do |config|
 	  a1.vm.network "forwarded_port", guest: 8080, host: 8080
   end
 
+  config.vm.define :namenode do |a1|
+	  a1.vm.hostname = "namenode.hortondemo"
+	  a1.vm.network :private_network, ip:"192.168.0.32"
+	  a1.vm.provider :virtualbox do |vb|
+		  vb.memory = "8192"
+	  end
+  end
+  config.vm.define :resourcemanager do |a1|
+	  a1.vm.hostname = "resourcemanager.hortondemo"
+	  a1.vm.network :private_network, ip:"192.168.0.33"
+	  a1.vm.provider :virtualbox do |vb|
+		  vb.memory = "4096"
+	  end
+  end
+  config.vm.define :node1 do |a1|
+	  a1.vm.hostname = "node1.hortondemo"
+	  a1.vm.network :private_network, ip:"192.168.0.34"
+	  a1.vm.provider :virtualbox do |vb|
+		  vb.memory = "4096"
+	  end
+  end
+  config.vm.define :node2 do |a1|
+	  a1.vm.hostname = "node2.hortondemo"
+	  a1.vm.network :private_network, ip:"192.168.0.35"
+	  a1.vm.provider :virtualbox do |vb|
+		  vb.memory = "4096"
+	  end
+  end
+
   # Create a forwarded port mapping which allows access to a specific port
   # within the machine from a port on the host machine. In the example below,
   # accessing "localhost:8080" will access port 80 on the guest machine.
